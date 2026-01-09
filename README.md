@@ -9,30 +9,12 @@ This repository contains the final report and analysis for a project on intercon
 ---
 
 ## 📌 Project Overview
-The growing demand for low-latency applications has accelerated the deployment of edge data centers. [cite_start]However, these facilities face stringent limitations in **rack space, power availability, and budget**[cite: 171, 172].
 
-This project investigates the trade-offs in **Clos-based network topologies** (Leaf-Spine) for edge-scale deployments. [cite_start]A specific focus is given to the **Italian context**, where regulatory and infrastructural challenges (e.g., power grid density) complicate distributed infrastructure deployment[cite: 173, 175].
+The growing demand for **low-latency applications, IoT processing**, and **5G services** has accelerated the deployment of **edge data centers** in geographically distributed and resource-constrained environments. In such scenarios, **network infrastructure** must be carefully designed to meet stringent limitations in **rack space, power availability**, and **cost**, while ensuring sufficient performance and resilience.
 
-## 🎯 Key Objectives
-* [cite_start]**Design Space Exploration:** Analyzed five topology variants, including Full Bisection and Oversubscribed configurations (2:1, 4:3, 4:1)[cite: 174, 279].
-* **Constraint Modeling:** Evaluated topologies under realistic "Micro Edge" constraints:
-    * [cite_start]**Rack Space:** Max 42U[cite: 174].
-    * [cite_start]**Power Budget:** Max 5kW[cite: 174].
-    * [cite_start]**Cost Efficiency:** Balancing CAPEX with Bisection Bandwidth[cite: 254].
-* **Optimization:** Identified the most efficient configurations to maximize performance per Euro spent.
+This report investigates the **trade-offs** between performance and infrastructure constraints in the design of **Clos-based network topologies** for edge-scale deployments. A **parametric exploration** of five different topology variants, including **full bisection** and **oversubscribed configurations**, is conducted, with each evaluated under realistic constraints such as **limited rack space** (e.g. 42U), **power budget** (e.g. 5kW), and **cost** (e.g. C20,000).
 
-## 🛠 Methodology & Tools
-[cite_start]The analysis uses a **parametric modeling approach** rather than packet-level simulation to allow for rapid evaluation of infrastructure costs and theoretical performance[cite: 258].
-
-* **Technologies:** Python (Pandas, Matplotlib), Google Colab Notebooks.
-* [cite_start]**Architectures:** 2-Tier Clos Networks (Fat-Tree), Commodity Switches (24/48 ports)[cite: 264].
-* [cite_start]**Metrics:** Total Cost (€), Power Consumption (W), Rack Units (U), Bisection Bandwidth (Gbps)[cite: 308].
-
-## 📊 Key Findings
-* [cite_start]**Oversubscription is critical:** A **2:1 oversubscription ratio** proved to be the best overall balance between cost, bandwidth, and scalability for general edge workloads[cite: 525].
-* [cite_start]**Intermediate solutions:** The **4:3 ratio** emerged as a strong alternative for scenarios requiring slightly higher performance without the extreme cost of full bisection[cite: 526].
-* [cite_start]**Feasibility:** Full Bisection topologies often exceed power and budget limits for micro-edge deployments, making optimized oversubscription necessary for the Italian edge scenario[cite: 519, 536].
+A specific focus is given to the **Italian context**, where regulatory and infrastructural challenges further complicate the deployment of distributed data center infrastructure. By **modeling and analyzing** these topologies across various metrics—total cost, energy consumption, bisection bandwidth, and space usage, this study identifies **feasible and efficient solutions** for edge network design. The results provide **actionable insights** for practitioners and designers seeking to balance cost-effectiveness and performance in constrained environments.
 
 ---
 
-## 📂 Repository Structure
